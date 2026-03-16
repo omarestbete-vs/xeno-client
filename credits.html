@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Xeno - Credits</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, Helvetica, sans-serif; }
+body { background:#000; color:white; scroll-behavior:smooth; }
+nav { display:flex; justify-content:space-between; align-items:center; padding:20px 60px; background:#111; position:fixed; width:100%; top:0; z-index:1000; }
+nav ul { display:flex; gap:30px; list-style:none; }
+nav ul li a { color:#ccc; text-decoration:none; font-size:16px; padding:8px 15px; border-radius:50px; transition:all 0.3s ease; }
+nav ul li a:hover { transform:scale(1.1); box-shadow:0 0 0 3px rgba(255,255,255,0.3); color:#fff; }
+.logo { font-size:24px; font-weight:bold; }
+section { padding-top:140px; padding-bottom:80px; text-align:center; }
+.animate-on-load > * { opacity:0; transform:translateY(40px); transition:all 0.8s ease-out; }
+.animate-on-load .animate { opacity:1 !important; transform:translateY(0) !important; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Xeno</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="help.html">Help</a></li>
+    <li><a href="executor.html">Executor</a></li>
+    <li><a href="download.html">Download</a></li>
+    <li><a href="credits.html">Credits</a></li>
+  </ul>
+</nav>
+
+<section class="animate-on-load">
+  <h1>Credits</h1>
+  <p>Project Xeno was created by me. Thanks to all contributors and our community for supporting development.</p>
+</section>
+
+<script>
+window.addEventListener('load', () => {
+  const elements = document.querySelectorAll('.animate-on-load > *');
+  elements.forEach((el,i) => { setTimeout(() => el.classList.add('animate'), i*200); });
+});
+</script>
+
+</body>
+</html>
